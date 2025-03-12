@@ -1,23 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+/* eslint-disable no-unused-expressions */
+import React from "react";
+import Navbar from "./Component/Navbar";
+import "./index.css"
+import About from "./Component/TopContainer/About";
+import TopContent from "./Component/TopContainer/TopContent";
+import Skills from "./Component/SkillContainer/Skills";
+import ProjectContainer from "./Component/ProjectContainer/ProjectContainer";
+import Exprerience from "./Component/Experience/Exprerience";
+import Contact from "./Component/Contact/Contact";
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Navbar />
+      <About />
+      <Skills />
+      <ProjectContainer />
+      <Exprerience />
+      <Contact />
     </div>
   );
 }

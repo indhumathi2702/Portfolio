@@ -1,13 +1,294 @@
+@import url("https://fonts.googleapis.com/css2?family=Alata&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alata&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap");
+* {
+  margin: 0%;
+}
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  background-color: black;
+}
+.navBar {
+  display: flex;
+  align-items: center;
+  background-color: black;
+  color: aliceblue;
+  /* When I scroll the page navBar didn't scroll because it's Sticky it's constant */
+  top: 0;
+  position: sticky;
+  z-index: 2000;
+}
+.navBar_left {
+  flex: 0.4;
+}
+/* modify h1 tag */
+.navBar_left > h1 {
+  text-align: center;
+  font-family: "Alata", sans-serif;
+  letter-spacing: 1px;
+  padding: 20px 0;
+}
+.navBar_left > h1 > span {
+  color: #f64c08;
+}
+.navBar_right {
+  display: flex;
+  flex: 0.6;
+  justify-content: space-evenly;
+}
+.navBar_right > a > h4 {
+  font-size: 18px;
+  cursor: pointer;
+  transition: transform 200ms ease-in-out;
+  padding: 20px 0;
+  letter-spacing: 1px;
+}
+/* When I click button that time action is doing Like Box Button, Underline*/
+.navBar_right > a > h4:hover {
+  transform: scale(1.09);
+  background-color: #f64c08;
+  color: aliceblue;
+  padding: 5px 20px;
+  border-radius: 2px;
+  letter-spacing: 1px;
+  font-family: "Crimson Text", serif;
+  font-size: 18px;
+}
+.topContent {
+  color: rgb(255, 255, 255);
+  position: relative;
+}
+.topContent_container {
+  position: absolute;
+  top: 300px;
+  right: 150px;
+}
+.topContent_container > p {
+  letter-spacing: 2px;
+  align-items: left;
+  padding-left: 3px;
+  padding-top: 20px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.topContent_container > a > button {
+  margin-top: 30px;
+  text-align: left;
+  margin-left: 5px;
+  border: none;
+  border-radius: 2px;
+  outline: none;
+  cursor: pointer;
+}
+.topContent_container > h1 {
+  font-size: 40px;
+}
+.topContent_download {
+  color: aliceblue;
+  background-color: #f64c08;
+  font-size: 14px;
+  padding: 10px 30px;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 500;
+  cursor: pointer;
+  letter-spacing: 1px;
+  margin-right: 20px;
+}
+.topContent_download:hover {
+  background-color: rgb(255, 255, 255);
+  color: #f64c08;
+  font-weight: 900;
+}
+
+/* .topContent_Project{
+  color: aliceblue;
+  background-color: #ca0575;
+  font-size: 14px;
+  padding: 10px 30px;
+  font-weight: 300;
+  cursor: pointer;
+} */
+
+.topContent_Project {
+  color: white;
+  border: 1px solid white !important;
+  background-color: transparent;
+  font-size: 14px;
+  padding: 10px 45px;
+  font-family: "Times New Roman", Times, serif;
+  letter-spacing: 1px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.topContent_Project:hover {
+  color: black;
+  background-color: #ffffff;
+  font-weight: 900;
+}
+
+/* Import Image in background soo used URL */
+.topContainer {
+  background: url(../public/assets/pic5.jpg);
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* image Shadow */
+  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.4);
+}
+
+/* Skills...... */
+
+.skillContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 200px 0;
+}
+.SkillImag {
+  width: 300px;
+  flex: 0.4;
+  text-align: center;
+  margin-right: 100px;
+  border-radius: 12px;
+  /* Width = Height Atomatically came */
+  object-fit: contain;
+}
+
+.skillContainer_text {
+  color: #ffffff;
+  flex: 0.6;
+  max-width: 500px;
+}
+.skillContainer_text > h2 {
+  font-size: 30px;
+}
+.skillcontainer_skillset > h5 {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: 300;
+  padding-bottom: 10px;
+  padding-top: 20px;
+}
+.skillcontainer_skillset > div > .MuiLinearProgress-colorPrimary {
+  background-color: rgb(95, 92, 92);
+}
+
+/* Projects */
+.projectContainer {
+  background-color: #000000;
+  color: #fffbfb;
+  padding: 50px 10%;
+  text-align: center;
+}
+.projectContainer > h1 {
+  font-size: 2.5rem;
+  letter-spacing: 1.5px;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+.projectContainer > p {
+  font-size: 1.2rem;
+  color: #7a7979;
+  margin-bottom: 30px;
+}
+.projectContainer_list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+.projectContainer_item {
+  background: rgb(255, 253, 253);
+  padding: 20px;
+  color: #000000;
+  width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+  text-align: left;
+  transition: transform 0.3s ease-in-out;
+}
+
+.projectContainer_item:hover {
+  transform: scale(1.05);
+}
+
+.projectContainer_item > h3 {
+  font-size: 1.5rem;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.projectContainer_item > p {
+  font-size: 1rem;
+  color: #565656;
+}
+.experienceContainer {
+  display: flex;
+  flex-direction: column;
+  color: #ffffff;
+  align-items: center;
+  justify-content: center;
+  margin: 200px 0 100px;
+}
+.Experience {
+  border: 3px dotted rgb(255, 76, 21);
+  width: 600px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  margin-top: 20px;
+}
+
+.experienceContainer > h1 {
+  padding-bottom: 20px;
+}
+
+.Experience {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.experienceBox > p {
+  color: #ffffff;
+  font-size: 1.2rem;
+  text-align: left;
+  padding: 12px;
+}
+.contact {
+  display: flex;
+  flex-direction: column;
+  color: #ffffff;
+  align-items: center;
+  justify-content: center;
+  margin: 200px 0 100px;
+}
+.contact_container {
+  border: 1px solid white;
+  width: 600px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  margin-top: 20px;
+}
+.contact_container > p {
+  font-size: 20px;
+  text-align: left;
+  padding-bottom: 30px;
+}
+.contact_container > p > span {
+  color: #f64c08;
+}
+.contact_icon > a > button > span > .MuiSvgIcon-root {
+  color: white;
+  font-size: 30px;
+}
+.contact_icon > a > .MuiIconButton-root {
+  color: #fffbfb !important;
 }
